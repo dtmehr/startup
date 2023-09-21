@@ -4,7 +4,7 @@
 
 ### Elevator pitch
 
-Since the ancient days, humans everywhere have adorned themselves with nice things. Jewlry is a key component and indicator of a greater cultural manifestation. My bracelet startup provides a way for people to express themselves in their daily lives. Starting with the website, and finishing with the bracelet on your wrist, this startup is made to provide a unique and personal experience to all. 
+Since the ancient days, humans everywhere have adorned themselves with nice things. Jewelry is a key component and indicator of a greater cultural manifestation. My bracelet startup provides a way for people to express themselves in their daily lives. Starting with the website, and finishing with the bracelet on your wrist, this startup is made to provide a unique and personal experience to all. 
 
 ### Design
 
