@@ -33,12 +33,12 @@ Since the ancient days, humans everywhere have adorned themselves with nice thin
 
 ## HTML deliverable
 
-- **HTML pages** - Three HTML pages to login, select bracelet(s), then view cart
+- **HTML pages** - Three HTML pages to login, select bracelet(s), then view cart 
 - **Links** - The login page automatically links to the selection page. The selection page has a few options of bracelets to select, then go to the cart page. 
-- **Text** - Each of the voting choices is represented by a textual description.
-- **Images** - One picture for each bracelet, as well as a picture on the cart and login screen.
+- **Text** - Selection buttons for the bracelets are labeled 
+- **Images** - One picture for each bracelet, as well as a picture on the cart and login screen. Pics will be loaded later, right now there are placeholders for them
 - **Login** - Input box and submit button for login.
-- **Database** - Bracelet data and sales will be stored and accessible from the database.
+- **Database** - Bracelet data and sales will be stored and accessible from the database. Placeholders for now. 
 - **WebSocket** - The count of puchases for each bracelet results represent the tally of realtime purchases.
 
 ## CSS deliverable
