@@ -43,12 +43,12 @@ Since the ancient days, humans everywhere have adorned themselves with nice thin
 
 ## CSS deliverable
 
-- **Header, footer, and main content body**
-- **Navigation elements** - Elements will be consistent across the website
+- **Header, footer, and main content body** - might come back later and change so of the formatting if there's a cooler way to do it. 
+- **Navigation elements** - Elements are consistent across the website
 - **Responsive to window resizing** - My app looks great on all window sizes and devices
-- **Application elements** - Used good contrast and whitespace
-- **Application text content** - Consistent fonts
-- **Application images** - Images will be consistent and descriptive of the bracelets and company. 
+- **Application elements** - Used good contrast and whitespace. Orgainzation is good, but I might make changes later if I find a better way of doing it. 
+- **Application text content** - Consistent fonts, easy to read and follow.
+- **Application images** - Images will be consistent and descriptive of the bracelets and company. I still need to take the bracelet pics, but the locations of the pics are all correct.
 
 ## JavaScript deliverable
 
