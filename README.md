@@ -44,8 +44,8 @@ Since the ancient days, humans everywhere have adorned themselves with nice thin
 ## CSS deliverable
 
 - **Header, footer, and main content body** - might come back later and change so of the formatting if there's a cooler way to do it. 
-- **Navigation elements** - Elements are consistent across the website
-- **Responsive to window resizing** - My app looks great on all window sizes and devices
+- **Navigation elements** - Elements are consistent across the website.
+- **Responsive to window resizing** - My app looks great on all window sizes and devices.
 - **Application elements** - Used good contrast and whitespace. Orgainzation is good, but I might make changes later if I find a better way of doing it. 
 - **Application text content** - Consistent fonts, easy to read and follow.
 - **Application images** - Images will be consistent and descriptive of the bracelets and company. I still need to take the bracelet pics, but the locations of the pics are all correct.
@@ -54,10 +54,10 @@ Since the ancient days, humans everywhere have adorned themselves with nice thin
 
 Single user functionality.
 
-- **login** - Logging in takes you to the bracelet options page.
-- **database** - Displays which bracelet is the current best seller.
-- **WebSocket** - I used the setInterval function to periodically increase a random bracelet count. This will be replaced with WebSocket messages in the future. 
-- **application logic** - The highlight and ranking number of the bracelets will change based up the user's selections.
+- **login** - Logging in takes you to the "play" page, which I will change to the shop page later. The username is stored locally for now. 
+- **database** - Dummy data is loaded into a table under the cart header (on the "scores" page.)
+- **WebSocket** - I used the setInterval function to periodically increase a random bracelet count that a random user "bob" purchases. This will be replaced with WebSocket messages in the future. It can be found on top of the "play" page, but I will probably move this later to make it easier to look at. 
+- **application logic** - Each time that the "purchase" button is clicked on the "play" page, the cart total will increase on the website header. This can be seen in real time on the play page. 
 
 ## Service deliverable
 

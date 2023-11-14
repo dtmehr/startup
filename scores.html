@@ -11,6 +11,7 @@
     crossorigin="anonymous"
   />
     <link rel="stylesheet" href="main.css" />
+    <script src = 'scores.js'></script>
       
       <nav class="navbar fixed-top navbar-dark">
         <a class="navbar-brand" href="#">BraceletClub</a>
@@ -31,8 +32,8 @@
       </nav>
     </header>
 <!-- datatable. cart items -->
-<main class="container-fluid bg-secondary text-center">
-  <table class="table table-warning table-striped-columns">
+<main  class="container-fluid bg-secondary text-center">
+  <table  class="table table-warning table-striped-columns">
     <thead class="table-dark">
           <tr>
             <th>Quantity</th>
@@ -41,30 +42,13 @@
             <th>Date</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Bracelet1</td>
-            <td>4</td>
-            <td>May 20, 2021</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Bracelet2</td>
-            <td>1</td>
-            <td>June 2, 2021</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Bracelet3</td>
-            <td>3</td>
-            <td>July 3, 2020</td>
-          </tr>
+        <tbody id = "cartTable">
         </tbody>
       </table>
     </main>
 
     <footer>
+      <script>cartData()</script>
       <hr />
       <span class="text-reset">Todd Mehr</span>
       <br />

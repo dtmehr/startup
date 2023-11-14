@@ -10,6 +10,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
     crossorigin="anonymous"
   />
+  <script src = 'play.js'></script>
     <link rel="stylesheet" href="main.css" />
       
       <nav class="navbar fixed-top navbar-dark">
@@ -22,14 +23,14 @@
             <a class="nav-link" href="play.html">Play</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="scores.html">Scores</a>
+            <a id="cartCount" class="nav-link" href="scores.html">Cart: 0</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
         </menu>
       </nav>
-    </header>
+
 
     <main>
       <!-- <div class="players">
@@ -37,7 +38,7 @@
         <span class="player-name">Mystery player</span>
       </div> -->
       <ul class="notification">
-        <li class="player-name">Bracelet 1 is the current bestseller!</li>
+        <p id = 'notifier'class="player-name">Bracelet 1 is the current bestseller!</p>
         <!-- <li class="player-name">Ada started a new game</li>
         <li class="player-name">Tim scored 337</li> -->
       </ul>
@@ -59,7 +60,7 @@
               <div>
                 <image src="" alt="bracelet1" width="300px" height="300px">
                   <div>
-                    <button>Purchase</button>
+                    <button onclick=addToCart()>Purchase</button>
                   </div>
               </div>
             </td>
@@ -67,7 +68,7 @@
               <div>
                 <image src="" alt="bracelet2" width="300px" height="300px">
                   <div>
-                    <button>Purchase</button>
+                    <button onclick=addToCart()>Purchase</button>
                   </div>
               </div>
             </td>
@@ -77,7 +78,7 @@
               <div>
                 <image src="" alt="bracelet3" width="300px" height="300px">
                   <div>
-                    <button>Purchase</button>
+                    <button onclick=addToCart()>Purchase</button>
                   </div>
               </div>
             </td>
@@ -85,7 +86,7 @@
               <div>
                 <image src="" alt="bracelet4" width="300px" height="300px">
                   <div>
-                    <button>Purchase</button>
+                    <button onclick=addToCart()>Purchase</button>
                   </div>
               </div>
             </td>
