@@ -26,6 +26,7 @@ Since the ancient days, humans everywhere have adorned themselves with nice thin
   - retrieving bracelets
   - submitting selected bracelets
   - managing cart 
+  (all of these functions can be found in the shop.js, and index.js files)
 - **DB** - Store users, bracelets, and bracelets purchased in database.
 - **Login** - Register and login users. Credentials securely stored in database. Bracelets will not be available without a valid credital.
 - **WebSocket** - Amount of bracelets purchased is recorded to show "best selling" bracelet 
@@ -63,10 +64,13 @@ Single user functionality.
 
 Backend to show best seller, as well as keep track of bracelets in cart.
 
-- **Node.js/Express HTTP service** - to be done in the future 
-- **Static middleware for frontend** - to be done in the future
-- **Backend service endpoints** - Stores the current user on the server. Endpoints for cart totals
-- **Frontend calls service endpoints** - to be done in the future. 
+- **Node.js/Express HTTP service** - created functions in shop.js and index.js 
+- **Static middleware for frontend** - created functions in shop.js and index.js 
+- **Backend service endpoints** - created functions in shop.js and index.js 
+- **Frontend calls service endpoints** - created functions in shop.js and index.js  
+
+cart keeps track of selected bracelet. (user clicks the purchase button and the corresponding bracelet is stored as an array in the index.js file called cartItems)
+the images of the bracelets are no longer hard coded in, they are located in the shop.js file. 
 
 ## DB deliverable
 
