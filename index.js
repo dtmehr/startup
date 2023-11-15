@@ -15,14 +15,15 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // GetScores
-apiRouter.get('/scores', (_req, res) => {
-  res.send(scores);
+apiRouter.post('/addCart', (req, res) => {
+  cartItems.push(req.body)
+  console.log(cartItems)
 });
 
 // SubmitScore
-apiRouter.post('/score', (req, res) => {
+apiRouter.get('/store', (req, res) => {
   scores = updateScores(req.body, scores);
-  res.send(scores);
+  res.send(braceletList);
 });
 
 // Return the application's default page if the path is unknown
@@ -57,3 +58,24 @@ function updateScores(newScore, scores) {
 
   return scores;
 }
+
+
+bracelet1 = {
+  name: "bracelet1"
+}
+
+bracelet2 ={
+  name: "bracelet2"
+}
+
+bracelet3 = {
+  name: "bracelet3"
+}
+
+bracelet4 = {
+  name: "bracelet4"
+}
+
+braceletList = [bracelet1, bracelet2, bracelet3, bracelet4]
+
+let cartItems = []
