@@ -76,7 +76,7 @@ the images of the bracelets are no longer hard coded in, they are located in the
 
 Bracelet data to be stored in database
 
-- **MongoDB Atlas database created** - to be done in the future.
+- **MongoDB Atlas database created** - database successfully created.
 - **Endpoints for data** - to be done in the future.
 - **Stores data in MongoDB** - to be done in the future.
 
