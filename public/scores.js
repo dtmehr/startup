@@ -32,17 +32,20 @@ function loadScores() {
   }
 }
 
-function cartData() {
+async function cartData() {
+  results = await fetch('api/cartItems')
+  cartItems = await results.json();
+  console.log(cartItems)
   table = document.getElementById("cartTable");
-  for (let i = 0; i < 5; i ++ ){
+  for (let i = 0; i < cartItems.length; i ++ ){
   row = table.insertRow(i);
   cell1 = row.insertCell(0);
   cell2 = row.insertCell(1);
   cell3 = row.insertCell(2);
   cell4 = row.insertCell(3)
   cell1.innerHTML = i;
-  cell2.innerHTML = 'dummy object' + i;
-  cell3.innerHTML = i;
+  cell2.innerHTML = cartItems[i].name;
+  cell3.innerHTML = '$5';
   cell4.innerHTML = 'May 20, 2021';
   }
 }

@@ -1,3 +1,22 @@
+const { MongoClient } = require('mongodb');
+const config = require('./dbConfig.json');
+const DB = require('./database.js');
+
+async function main() {
+  // Connect to the database cluster
+  const url = `mongodb+srv://dtmehr:Nikeninja04@cluster0.kuo7xke.mongodb.net/`;
+  const client = new MongoClient(url);
+  const db = client.db('rental');
+  const collection = db.collection('house');
+
+  // Test that you can connect to the database
+  (async function testConnection() {
+    await client.connect();
+    await db.command({ ping: 1 });
+  })().catch((ex) => {
+    console.log(`Unable to connect to database with ${url} because ${ex.message}`);
+    process.exit(1);
+  });
 const express = require('express');
 const app = express();
 
@@ -14,17 +33,7 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-// GetScores
-apiRouter.post('/addCart', (req, res) => {
-  cartItems.push(req.body)
-  console.log(cartItems)
-});
 
-// SubmitScore
-apiRouter.get('/store', (req, res) => {
-  scores = updateScores(req.body, scores);
-  res.send(braceletList);
-});
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
@@ -80,44 +89,30 @@ braceletList = [bracelet1, bracelet2, bracelet3, bracelet4]
 
 let cartItems = []
 
-const { MongoClient } = require('mongodb');
-const config = require('./dbConfig.json');
+// GetScores
 
-async function main() {
-  // Connect to the database cluster
-  const url = `mongodb+srv://dtmehr:Nikeninja04@cluster0.kuo7xke.mongodb.net/`;
-  const client = new MongoClient(url);
-  const db = client.db('rental');
-  const collection = db.collection('house');
+apiRouter.post('/addCart', async (req, res) => {
+  console.log('hello')
+  DB.addCart(req.body);
+  const cartItems = await DB.getCartItems();
+  res.send(cartItems);
+});
 
-  // Test that you can connect to the database
-  (async function testConnection() {
-    await client.connect();
-    await db.command({ ping: 1 });
-  })().catch((ex) => {
-    console.log(`Unable to connect to database with ${url} because ${ex.message}`);
-    process.exit(1);
-  });
+// SubmitScore
+apiRouter.get('/store', (req, res) => {
+  scores = updateScores(req.body, scores);
+  res.send(braceletList);
+});
 
-  // Insert a document
-  const house = {
-    name: 'Beachfront views',
-    summary: 'From your bedroom to the beach, no shoes required',
-    property_type: 'Condo',
-    beds: 1,
-  };
-  await collection.insertOne(house);
 
-  // Query the documents
-  const query = { property_type: 'Condo', beds: { $lt: 2 } };
-  const options = {
-    sort: { score: -1 },
-    limit: 10,
-  };
+// test
 
-  const cursor = collection.find(query, options);
-  const rentals = await cursor.toArray();
-  rentals.forEach((i) => console.log(i));
+apiRouter.get('/cartItems', async (_req, res) => {
+  const cartItems = await DB.getCartItems();
+  console.log(cartItems)
+  res.send(cartItems);
+});
+
 }
 
 main().catch(console.error);
