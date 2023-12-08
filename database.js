@@ -22,8 +22,8 @@ const cartCollection = db.collection('cart');
   process.exit(1);
 });
 
+//works
 async function addCart(cart) {
-    console.log('hello')
     const result = await cartCollection.insertOne(cart);
     return result;
   }

@@ -40,12 +40,14 @@ app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });
 
+//works
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
 // updateScores considers a new score for inclusion in the high scores.
 // The high scores are saved in memory and disappear whenever the service is restarted.
+//works
 let scores = [];
 function updateScores(newScore, scores) {
   let found = false;
@@ -89,16 +91,15 @@ braceletList = [bracelet1, bracelet2, bracelet3, bracelet4]
 
 let cartItems = []
 
-// GetScores
-
+// works
 apiRouter.post('/addCart', async (req, res) => {
-  console.log('hello')
   DB.addCart(req.body);
   const cartItems = await DB.getCartItems();
   res.send(cartItems);
 });
 
 // SubmitScore
+//works
 apiRouter.get('/store', (req, res) => {
   scores = updateScores(req.body, scores);
   res.send(braceletList);
@@ -107,11 +108,11 @@ apiRouter.get('/store', (req, res) => {
 
 // test
 
-apiRouter.get('/cartItems', async (_req, res) => {
-  const cartItems = await DB.getCartItems();
-  console.log(cartItems)
-  res.send(cartItems);
-});
+// apiRouter.get('/cartItems', async (_req, res) => {
+//   const cartItems = await DB.getCartItems();
+//   console.log(cartItems)
+//   res.send(cartItems);
+// });
 
 }
 
