@@ -84,8 +84,8 @@ Bracelet data to be stored in database
 
 Bracelet purchase associated to user's account
 
-- **User registration** - Creates a new account in the database.
-- **existing user** - Stores the votes under the same user if the user already exists.
+- **User registration** - Creates a new account.
+- **existing user** - Stores the bracelets under the same account if user already exists.
 - **Use MongoDB to store credentials** - Stores both user and their purchases.
 - **Restricts functionality** - You cannot purchase until you have logged in.
 
@@ -93,10 +93,10 @@ Bracelet purchase associated to user's account
 
 WebSocket to update the best selling bracelet on the frontend in realtime.
 
-- **Backend listens for WebSocket connection** - to be done in the future.
-- **Frontend makes WebSocket connection** - to be done in the future.
-- **Data sent over WebSocket connection** - to be done in the future.
-- **WebSocket data displayed** - Best selling bracelet to be displayed based off total purchases from users
+- **Backend listens for WebSocket connection** - done.
+- **Frontend makes WebSocket connection** - done.
+- **Data sent over WebSocket connection** - done.
+- **WebSocket data displayed** - bracelets sold randomly generated at the top of the screen, chat feature created in the about page.
 
 ## React deliverable
 

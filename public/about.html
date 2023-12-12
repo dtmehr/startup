@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="icon" href="favicon.ico" />
+
+    <script src="about.js"></script>
+
     
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="about.css" />
@@ -53,11 +56,15 @@
           We are confident you will find something you love on our site!</p> 
         </div>
       </div>
-<!-- 
-      <div id="quote">
-        <div>Words are cheap. Show me the code.</div>
-        <div>- Linus Torvalds</div>
-      </div> -->
+      <div class="chat-section">
+        <h2>Chat</h2>
+        <div class="chat-window">
+          <ul id="messages"></ul>
+        </div>
+        <input id="message-input" type="text" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+      </div>
+      
     </main>
 
     <footer>
