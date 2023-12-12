@@ -1,0 +1,20 @@
+
+  #container {
+    display: flex;
+    width: 50vw;
+    flex-wrap: wrap;
+    gap: 25vw;
+  }
+
+  #container > * {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 300px;
+    height: 300px;
+  }
+
+
+
+  
