@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb');
-
+const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 const config = require('./dbConfig.json');
 
 const userName = 'dtmehr';
@@ -11,6 +12,7 @@ const url = `mongodb+srv://dtmehr:Nikeninja04@cluster0.kuo7xke.mongodb.net/`;
 const client = new MongoClient(url);
 
 const db = client.db('starup');
+const userCollection = db.collection('user');
 const cartCollection = db.collection('cart');
 
 // This will asynchronously test the connection and exit the process if it fails
@@ -22,6 +24,27 @@ const cartCollection = db.collection('cart');
   process.exit(1);
 });
 
+function getUser(email) {
+  return userCollection.findOne({ email: email });
+}
+
+function getUserByToken(token) {
+  return userCollection.findOne({ token: token });
+}
+
+async function createUser(email, password) {
+  // Hash the password before we insert it into the database
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    email: email,
+    password: passwordHash,
+    token: uuid.v4(),
+  };
+  await userCollection.insertOne(user);
+
+  return user;
+}
 //works
 async function addCart(cart) {
     const result = await cartCollection.insertOne(cart);
@@ -33,4 +56,4 @@ async function getCartItems() {
     return cursor.toArray()
   }
 
-  module.exports = { addCart, getCartItems};
+  module.exports = { addCart, getCartItems, getUser, getUserByToken,};
