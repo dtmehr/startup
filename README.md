@@ -82,7 +82,7 @@ Bracelet data to be stored in database
 
 ## Login deliverable
 
-Bracelet purchase associated to user's account
+Follows the same format as Simon, to make it easier. 
 
 - **User registration** - Creates a new account.
 - **existing user** - Stores the bracelets under the same account if user already exists.
@@ -101,7 +101,7 @@ WebSocket to update the best selling bracelet on the frontend in realtime.
 ## React deliverable
 
 
-- **Bundled and transpiled** - to be done in the future.
-- **Components** - Login, bracelet list, and cart are all components.
-- **Router** - Routing between login and purchase components.
-- **Hooks** - to be done in the future.
+- **Bundled and transpiled** - done. all files are created with react. 
+- **Components** - Login, bracelet list, and cart have all been created components.
+- **Router** - done in jsx files.
+- **Hooks** - done on jsx files.
