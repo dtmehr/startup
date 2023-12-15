@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
-const config = require('/Users/toddman04/Desktop/CS 260/startup/service/dbConfig.json');
+const config = require('./dbConfig.json');
 
 const userName = 'dtmehr';
 const password = 'Nikeninja04';
