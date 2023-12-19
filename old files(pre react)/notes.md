@@ -116,12 +116,15 @@ Ports Used:
 HTTP uses port 80.
 HTTPS uses port 443.
 SSH uses port 22.
+
 HTTP Status Codes:
 Status codes in the 300 range generally indicate redirection.
 Codes in the 400 range indicate client errors, like '404 Not Found.'
 Codes in the 500 range indicate server errors, like '500 Internal Server Error.'
+
 HTTP Header Content-Type:
 The Content-Type header specifies the media type of the resource being sent or requested. It allows the client and server to understand how to parse the body of the request or response.
+
 Attributes of a Cookie:
 Domain: Specifies the domain for which the cookie is valid.
 Path: Defines the path within the domain for which the cookie is valid.
